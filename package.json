@@ -1,0 +1,23 @@
+{
+  "name": "weather-journal",
+  "version": "1.0.0",
+  "description": "Fourth project from udacity FEND Nanodegree Weather journal app.",
+  "main": "/website/app.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Jimit Raval",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "eslint": "^7.1.0",
+    "express": "^4.17.1",
+    "opn": "^6.0.0"
+  }
+}

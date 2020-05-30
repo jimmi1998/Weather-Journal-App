@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Weather Journal App</title>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+ <body>
+
+    <div id = "app">
+
+        <div class ="holder headline">
+            <h1>Weather Journal App</h1>
+            <span class='toggle-code'>code examples</span>
+            <span class='toggle-city'>enter name</span>
+        </div>
+
+        <div class ="holder codes">
+            <p class="code-city"><strong>Zip Сity Сodes for Example</strong><br> 
+                Los Angeles: <span class="code">5368361</span> New York: <span class="code">5128638</span> Dubai: <span class="code">292223</span> Tashkent: <span class="code">1512569</span>
+            </p>
+        </div>
+
+        <div class ="holder zip active"> 
+            <p class="error error-zip">You have not entered or entered the zip code incorrectly</p>   
+            <input type="text" autofocus id="zip" placeholder="Enter zip code here" maxlength="10">
+        </div>
+
+        <div class ="holder city"> 
+            <p class="error error-city">You have not entered or entered the name city incorrectly</p>   
+            <input type="text" autofocus id="city" placeholder="Enter the name of the city" maxlength="30">
+        </div>
+
+        <div class ="holder feel">
+            <p class="error error-feelings">You did not describe your feeling</p>   
+            <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here"></textarea>
+            <button id="generate" type="submit">Click Here for Add New Entry</button>
+        </div>
+
+        <div class="holder entry">
+            <h2>Last Entry</h2>
+            <div id="entryHolder">
+                <div class="last-entry">
+                    <div class="item-info">
+                        <div id="date" class="item-date last-date"></div>
+                        <p id="content" class="item-feeling"></p>
+                    </div>
+                    <div id="temp" class="item-weather"></div>
+                </div>
+                <div class="entry-one-empty">There's nothing yet. Here will be your new entry</div>
+            </div>
+        </div>
+
+        <div class="holder entry">
+            <h2>List of Entries (<span id="count-list"></span>)</h2>
+            <div id="entriesList">
+                <div class="entry-empty">There's nothing yet. Here will be your new entries</div>
+            </div>
+        </div>
+
+        <div class ="holder footer"> 
+            <p class="copyright">© Weather Journal App | 2020 | Created by <a href="https://github.com/jimmi1998/Weather-Journal-App" style="color: #00FFEE">Jimit Raval</a> | Web API used - <a href="https://openweathermap.org/" target="_blank">OpenWeather</a></p>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <p class="question">Are you sure you want to delete the entry?</p>
+            <div class="btn-group">
+                <span class="btn btn-delete">Delete</span>
+                <span class="btn btn-cancel">Сancel</span>
+            </div>
+        </div>
+        <div class="modal-curtain"></div>
+    </div>
+
+    <!-- JavaScript file connection -->
+    <script src="app.js"></script>
+</body>
+</html>
